@@ -45,12 +45,15 @@ Confusion matrix used to evaluate misclassifications.
 Example plots:
 
 # Example training plot code
-plt.plot(history.history['accuracy'])
-plt.plot(history.history['val_accuracy'])
-plt.title('Model Accuracy')
+# Plot training & validation loss values
+plt.subplot(1, 2, 2)
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Model loss')
+plt.ylabel('Loss')
 plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.legend(['Train', 'Validation'], loc='lower right')
+plt.legend(['Train', 'Validation'], loc='upper left')
+
 plt.show()
 
 
